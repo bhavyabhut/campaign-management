@@ -1,0 +1,114 @@
+{
+    "root": true,
+    "env": {
+        "browser": true,
+        "es6": true,
+        "amd": true
+    },
+    "plugins": [
+        "eslint-plugin-prettier",
+        "react",
+        "jsx-a11y",
+        "import",
+        "eslint-plugin-import",
+        "prettier"
+    ],
+    "extends": [
+        "plugin:prettier/recommended",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+        "airbnb",
+        "airbnb/hooks",
+        "prettier",
+        "eslint-config-prettier"
+    ],
+    "settings": {
+        "import/extensions": [
+            ".js",
+            ".jsx"
+        ],
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "camelcase": "off",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ],
+        "no-useless-escape": "error",
+        "no-script-url": "error",
+        "jsx-a11y/anchor-has-content": "error",
+        "jsx-a11y/href-no-hash": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "jsx-a11y/anchor-is-valid": "error",
+        "no-template-curly-in-string": "error",
+        "react/prefer-stateless-function": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "linebreak-style": "error",
+        "react/jsx-wrap-multilines": "error",
+        "react/no-danger": "error",
+        "react/forbid-prop-types": "warn",
+        "no-use-before-define": "error",
+        "no-param-reassign": "error",
+        "import/no-unresolved": "off",
+        "no-console": "error",
+        "react/no-multi-comp": [
+            "error",
+            {
+                "ignoreStateless": true
+            }
+        ],
+        "space-before-blocks": "error",
+        "space-before-function-paren": [
+            "error",
+            {
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "always"
+            }
+        ],
+        "prettier/prettier": "error",
+        "no-unused-vars": "error",
+        "no-underscore-dangle": "off",
+        "react/jsx-fragments": [
+            1,
+            "element"
+        ],
+        "react/jsx-props-no-spreading": [
+            1,
+            {
+                "html": "enforce",
+                "custom": "ignore",
+                "explicitSpread": "ignore",
+                "exceptions": [
+                    "img",
+                    "div"
+                ]
+            }
+        ],
+        "import/prefer-default-export": "off",
+        "import/no-cycle": "off",
+        "react/prop-types": [
+            "error",
+            {
+                "ignore": [
+                    "children"
+                ]
+            }
+        ]
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "legacyDecorators": true,
+            "jsx": true
+        }
+    }
+}

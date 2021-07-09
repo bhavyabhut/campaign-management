@@ -1,0 +1,10 @@
+
+public
+
+**/*.test.js
+
+# PAGE FOLDER
+!src/containers/Pages/Category
+
+# REDUX FOLDER
+!src/redux/category
