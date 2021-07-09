@@ -24,7 +24,8 @@
     "lint-staged": "lint-staged",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,less}\"",
     "lint-fix": "eslint --fix --ext .js,jsx src",
-    "lint": "eslint --ext .js,jsx src"
+    "lint": "eslint --ext .js,jsx src",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -69,10 +70,6 @@
     "src/**/*.{js,jsx}": [
       "eslint --fix",
       "git add"
-    ],
-    "src/**/*.{scss,less}": [
-      "stylelint"
     ]
   }
-  
 }
