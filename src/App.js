@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { store } from './redux/store';
+import Boot from './redux/boot';
+import Routes from './router';
+import Notification from './Notifications';
+
+const App = () => (
+  <Provider store={store}>
+    <Notification />
+    <Routes />
+  </Provider>
+);
+
+Boot()
+  .then(() => App())
+  .catch(error => console.log(error));
 
 export default App;
