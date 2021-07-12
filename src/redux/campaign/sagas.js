@@ -50,8 +50,6 @@ function* addData({ payload }) {
 function* updateData({ payload }) {
   yield setLoader(true);
   try {
-    // const data = yield call(updateCampaignApi, payload.data);
-
     const { allData } = yield select(state => state.Campaign);
     const newData = allData.map(data => {
       if (data.id === payload.data.id)

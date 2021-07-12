@@ -7,7 +7,7 @@ import ErrorBoundary from './ErrorBoundary';
 import { PUBLIC_ROUTE } from './constants/routerConst';
 import Spinner from './components/Spinner';
 
-const App = lazy(() => import('./containers/App/Layout'));
+const AppLayout = lazy(() => import('./containers/App/Layout'));
 
 const publicRoutes = [
   // All public Router like (login,etc) goes here
@@ -56,15 +56,14 @@ export default function Routes() {
       <Suspense fallback={<Spinner />}>
         <Router>
           <Switch>
-            <PrivateRoute path="/">
-              <App />
-            </PrivateRoute>
             {publicRoutes.map(route => (
               <Route key={route.path} path={route.path} exact={route.exact}>
                 <route.component />
               </Route>
             ))}
-
+            <PrivateRoute path="/">
+              <AppLayout />
+            </PrivateRoute>
             <Route component={lazy(() => import('./containers/Pages/404'))} />
           </Switch>
         </Router>

@@ -57,4 +57,5 @@ const actions = {
     payload: { value },
   }),
 };
+
 export default actions;

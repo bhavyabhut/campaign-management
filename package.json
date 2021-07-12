@@ -79,9 +79,5 @@
     "src/**/*.{js,jsx}": [
       "eslint --fix"
     ]
-  },
-  "engines": {
-    "node": "v12.18.3",
-    "npm": "6.14.6"
   }
 }

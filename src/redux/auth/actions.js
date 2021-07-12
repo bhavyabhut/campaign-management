@@ -12,4 +12,5 @@ const actions = {
     type: actions.LOGOUT,
   }),
 };
+
 export default actions;

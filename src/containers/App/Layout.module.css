@@ -1,0 +1,11 @@
+.layoutStyle {
+  min-height: 100vh;
+}
+
+.headerStyle {
+  padding: 0;
+}
+
+.contentStyle {
+  padding: 1.5rem;
+}

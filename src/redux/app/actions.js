@@ -4,4 +4,5 @@ const actions = {
   showNotification: data => ({ type: actions.SHOW_NOTIFICATION, payload: { data } }),
   showNotificationSuccess: () => ({ type: actions.SHOW_NOTIFICATION_SUCCESS }),
 };
+
 export default actions;

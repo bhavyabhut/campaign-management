@@ -1,11 +1,8 @@
-/* eslint-disable import/extensions */
-
 import { all, takeEvery, put, call, select } from 'redux-saga/effects';
 import { createBrowserHistory } from 'history';
 
 import { getToken, clearToken } from '../../utility/helpers/general';
 import actions from './actions';
-
 import { unHandleError } from '../../constants/error';
 import { showNotification } from '../app/sagas';
 
@@ -43,7 +40,3 @@ export default function* rootSaga() {
     takeEvery(actions.LOGOUT, logout),
   ]);
 }
-
-// export default function* rootSaga() {
-//   yield all([fork(checkAuthorization), fork(loginSuccess), fork(logout)]);
-// }

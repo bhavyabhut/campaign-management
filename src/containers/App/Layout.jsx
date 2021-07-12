@@ -7,6 +7,7 @@ import Avatar from 'antd/lib/avatar/avatar';
 import AppRouter from './AppRouter';
 import Logo from '../../assets/Logo';
 import { getWindowDimension } from '../../utility/helpers/general';
+import style from './Layout.module.css';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -32,7 +33,7 @@ const MyLayout = () => {
   if (pathname === '/campaigns') defaultActiveKey = '2';
 
   return (
-    <Layout style={{ minHeight: '100vh' }}>
+    <Layout className={style.layoutStyle}>
       <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
         <div className="logo">
           <Logo />
@@ -48,7 +49,7 @@ const MyLayout = () => {
         </Menu>
       </Sider>
       <Layout className="site-layout">
-        <Header theme="dark" className="site-layout-background" style={{ padding: 0 }}>
+        <Header theme="dark" className={`site-layout-background ${style.headerStyle}`}>
           <Menu className="flex-end-center" theme="dark" mode="horizontal">
             <SubMenu key="100" title={<Avatar size="large" src="../images/team_01.jpg" />}>
               {/* <Menu.Item
@@ -62,7 +63,7 @@ const MyLayout = () => {
           </Menu>
         </Header>
         <Content style={{ margin: '0 16px' }}>
-          <div className="site-layout-background" style={{ padding: '1.5rem' }}>
+          <div className={`site-layout-background ${style.contentStyle}`}>
             <AppRouter />
           </div>
         </Content>
