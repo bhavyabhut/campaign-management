@@ -24,7 +24,7 @@ const Content = ({ data }) => (
         data.tags.map(tagData => {
           const num = tagData.charCodeAt(0) + tagData.charCodeAt(tagData.length - 1);
           return (
-            <Tag style={{ color: 'black' }} color={tagColor[num % 11]}>
+            <Tag key={tagData} style={{ color: 'black' }} color={tagColor[num % 11]}>
               {tagData}
             </Tag>
           );

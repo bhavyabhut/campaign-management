@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Content Found match snapshot 1`] = `
+Array [
+  <div
+    className="mrb"
+  >
+    <span
+      className="customLabel"
+    >
+      Creator Name: 
+    </span>
+    <span>
+      Bhavya
+    </span>
+  </div>,
+  <div
+    className="mrb"
+  >
+    <span
+      className="customLabel"
+    >
+      Status: 
+    </span>
+    <span
+      style={
+        Object {
+          "color": "green",
+        }
+      }
+    >
+      Start
+    </span>
+  </div>,
+  <div
+    className="mrb"
+  >
+    <span
+      className="customLabel"
+    >
+      Tags: 
+    </span>
+    <span
+      className="ant-tag ant-tag-has-color"
+      style={
+        Object {
+          "backgroundColor": "#ffa39e",
+          "color": "black",
+        }
+      }
+    >
+      awesome
+    </span>
+    <span
+      className="ant-tag ant-tag-has-color"
+      style={
+        Object {
+          "backgroundColor": "#ffd591",
+          "color": "black",
+        }
+      }
+    >
+      nice
+    </span>
+  </div>,
+  <div
+    className="mrb"
+  >
+    <span
+      className="customLabel"
+    >
+      Created Time: 
+    </span>
+    <span>
+      a few seconds ago
+    </span>
+  </div>,
+  <div
+    className="mrb"
+  >
+    <span
+      className="customLabel"
+    >
+      Created At: 
+    </span>
+    <span>
+      
+    </span>
+  </div>,
+  <div
+    className="mrb"
+  >
+    <span
+      className="customLabel"
+    >
+      Updated Time: 
+    </span>
+    <span>
+      a few seconds ago
+    </span>
+  </div>,
+  <div
+    className="mrb"
+  >
+    <span
+      className="customLabel"
+    >
+      Updated At: 
+    </span>
+    <span>
+      
+    </span>
+  </div>,
+]
+`;

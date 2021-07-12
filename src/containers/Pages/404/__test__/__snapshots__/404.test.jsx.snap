@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`No Page Found match snapshot 1`] = `
+<div
+  className="noPage"
+>
+  <svg
+    className="noPageLogo"
+  >
+    undraw_page_not_found_su7k.svg
+  </svg>
+  <span>
+    Go back to 
+    <a
+      href="/dashboard"
+      onClick={[Function]}
+    >
+      dashboard
+    </a>
+     
+  </span>
+</div>
+`;

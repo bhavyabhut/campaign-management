@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`No Data Found match snapshot 1`] = `
+<div
+  className="NoData"
+>
+  <span>
+    No Campaign Data Found
+  </span>
+</div>
+`;
