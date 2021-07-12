@@ -1,11 +1,8 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Modal, Input, Button, Form, Select } from 'antd';
 import PropTypes from 'prop-types';
 import actions from '../../../redux/campaign/actions';
-
-// import useValidator from '../../../library/hooks/useValidator';
 
 const { changeFields, addData } = actions;
 

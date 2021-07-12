@@ -1,16 +1,11 @@
 import actions from './actions';
 
-const fields = { email: '', password: '' };
-
 const initState = {
-  idToken: null,
+  // By Default We Assume User is Logged In
+  idToken: 'secret',
   user: null,
-  roles: [],
-  fields,
   loading: false,
-  permissions: {},
-  isLogout: false,
-  options: [],
+  isLogout: true,
 };
 
 export default function authReducer(state = initState, action) {
@@ -20,42 +15,15 @@ export default function authReducer(state = initState, action) {
         ...state,
         idToken: action.token,
       };
-    case actions.STORE_USER_DETAILS: {
-      return {
-        ...state,
-        user: action.payload.data,
-      };
-    }
-    case actions.STORE_ROLES:
-      return {
-        ...state,
-        roles: action.payload.data,
-      };
-    case actions.FIELDS_CHANGE: {
-      return { ...state, fields: { ...state.fields, ...action.payload.data } };
-    }
-    case actions.SET_LOADER: {
-      return { ...state, loader: action.payload };
-    }
-    case actions.STORE_ORIGINAl_PERMISSIONS: {
-      return { ...state, permissions: action.payload.data };
-    }
     case actions.CHANGE_LOGOUT_STATE: {
       return { ...state, isLogout: false };
-    }
-    case actions.SET_SIDEBAR: {
-      return { ...state, options: action.payload.options };
     }
     case actions.LOGOUT:
       return {
         idToken: null,
         user: null,
-        roles: [],
-        fields,
         loading: false,
-        permissions: {},
         isLogout: true,
-        options: [],
       };
     default:
       return state;

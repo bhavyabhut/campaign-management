@@ -1,8 +1,8 @@
-export function clearToken() {
+export const clearToken = () => {
   localStorage.removeItem('id_token');
-}
+};
 
-export function getToken() {
+export const getToken = () => {
   try {
     let idToken = null;
     if (localStorage.getItem('id_token')) idToken = localStorage.getItem('id_token');
@@ -11,13 +11,9 @@ export function getToken() {
     clearToken();
     return null;
   }
-}
+};
 
-export function arrayEqual(array1, array2) {
-  return array1.sort().toString() === array2.sort().toString();
-}
-
-export function timeDifference(givenTimeArg) {
+export const timeDifference = givenTimeArg => {
   const givenTime = new Date(givenTimeArg);
   const milliseconds = new Date().getTime() - givenTime.getTime();
   const numberEnding = number => (number > 1 ? 's' : '');
@@ -65,18 +61,4 @@ export function timeDifference(givenTimeArg) {
     return 'a few seconds ago';
   };
   return getTime();
-}
-
-export function stringToInt(value, defValue = 0) {
-  if (!value) {
-    return 0;
-  }
-  if (!Number.isNaN(value)) {
-    return parseInt(value, 10);
-  }
-  return defValue;
-}
-export function stringToPosetiveInt(value, defValue = 0) {
-  const val = stringToInt(value, defValue);
-  return val > -1 ? val : defValue;
-}
+};

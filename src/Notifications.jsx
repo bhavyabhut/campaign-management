@@ -8,7 +8,6 @@ const Notification = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log('done', showNotification, type, message);
     if (showNotification) {
       notification[type]({
         message: type,
@@ -17,7 +16,7 @@ const Notification = () => {
       dispatch(actions.showNotificationSuccess());
     }
   }, [showNotification]);
-  return <React.Fragment />;
+  return <></>;
 };
 
 export default Notification;

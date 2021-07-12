@@ -10,38 +10,38 @@ import Spinner from './components/Spinner';
 const App = lazy(() => import('./containers/App/AppRouter'));
 
 const publicRoutes = [
-  {
-    path: PUBLIC_ROUTE.LANDING,
-    exact: true,
-    component: lazy(() => import('./containers/Pages/Login')),
-  },
+  // All public Router like (login,etc) goes here
+  // {
+  //   path: PUBLIC_ROUTE.LANDING,
+  //   exact: true,
+  //   component: lazy(() => import('./containers/Pages/Login')),
+  // },
   {
     path: PUBLIC_ROUTE.PAGE_404,
     component: lazy(() => import('./containers/Pages/404')),
   },
-
-  {
-    path: PUBLIC_ROUTE.SIGN_IN,
-    component: lazy(() => import('./containers/Pages/Login')),
-  },
+  // {
+  //   path: PUBLIC_ROUTE.SIGN_IN,
+  //   component: lazy(() => import('./containers/Pages/Login')),
+  // },
 ];
 function PrivateRoute({ children, ...rest }) {
-  let isLoggedIn = useSelector(state => state.Auth.isLoggedIn);
+  // Every Time isLoggedIn true because of its hard codded
+  let isLoggedIn = useSelector(state => state.Auth.idToken);
   const isLoggedOut = useSelector(state => state.Auth.isLoggedOut);
 
   if (!isLoggedIn) isLoggedIn = getToken().idToken;
-  isLoggedIn = true;
+
   return (
     <Route
       {...rest}
-      render={({ location }) =>
+      render={() =>
         isLoggedIn && !isLoggedOut ? (
           children
         ) : (
           <Redirect
             to={{
               pathname: PUBLIC_ROUTE.SIGN_IN,
-              state: { from: location },
             }}
           />
         )
@@ -64,6 +64,7 @@ export default function Routes() {
             <PrivateRoute path="/admin">
               <App />
             </PrivateRoute>
+            <Route component={lazy(() => import('./containers/Pages/404'))} />
           </Switch>
         </Router>
       </Suspense>

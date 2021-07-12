@@ -7,7 +7,6 @@ const initState = {
   showAddModal: false,
   showEditModal: false,
   showDeleteModal: false,
-  showViewModal: false,
   eleDetails: [],
   deleteEleId: null,
   loader: false,
@@ -43,9 +42,7 @@ export default function reducer(state = initState, action) {
         selectedStatus: action.payload.value,
       };
     }
-    case actions.CAMPAIGN_VIEW_MODAL: {
-      return { ...state, showViewModal: action.payload.bool, eleDetails: action.payload.data };
-    }
+
     case actions.FIELDS_CHANGE: {
       return { ...state, fields: { ...state.fields, ...action.payload.data } };
     }

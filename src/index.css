@@ -9,6 +9,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
 .logo-svg {
   max-width: 100px;
 }
@@ -22,6 +23,15 @@ code {
 .ant-card-body {
   padding: 12px 24px !important;
 }
-.custom-label {
-  font-weight: bold;
+
+.flex-end-center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.logo {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

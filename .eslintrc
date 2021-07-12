@@ -80,7 +80,7 @@
         "no-underscore-dangle": "off",
         "react/jsx-fragments": [
             1,
-            "element"
+            "syntax"
         ],
         "react/jsx-props-no-spreading": [
             1,
