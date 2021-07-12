@@ -1,10 +1,9 @@
-
 public
 **/*.test.js
 **/*.test.jsx
 
 # PAGE FOLDER
-!src/containers/Pages/Category
+
 
 # REDUX FOLDER
-!src/redux/category
+
