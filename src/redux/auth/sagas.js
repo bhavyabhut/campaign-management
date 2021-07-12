@@ -11,7 +11,7 @@ import { showNotification } from '../app/sagas';
 
 const history = createBrowserHistory();
 
-export function* loginSuccess({ payload }) {
+export function* loginSuccess(payload) {
   yield localStorage.setItem('id_token', payload.token);
 }
 
