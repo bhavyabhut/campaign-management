@@ -15,6 +15,6 @@ const App = () => (
 
 Boot()
   .then(() => App())
-  .catch(error => console.log(error));
+  .catch(error => error);
 
 export default App;

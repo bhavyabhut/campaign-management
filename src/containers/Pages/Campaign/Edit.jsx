@@ -18,7 +18,7 @@ const EditCampaignModal = ({ closeEditModal }) => {
     form
       .validateFields()
       .then(() => dispatch(updateData({ ...fields })))
-      .catch(e => console.log('Validation Error', e));
+      .catch(e => e);
 
   const handleChange = (field, e) => {
     const newFields = { ...state.fields };

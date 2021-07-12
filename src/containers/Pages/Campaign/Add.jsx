@@ -32,7 +32,7 @@ const AddCampaignModal = ({ closeAddModal }) => {
     form
       .validateFields()
       .then(data => dispatch(addData(data)))
-      .catch(e => console.log('Validation Error', e));
+      .catch(e => e);
 
   return (
     <Modal
