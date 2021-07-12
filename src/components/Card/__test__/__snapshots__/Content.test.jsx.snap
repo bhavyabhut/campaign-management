@@ -40,27 +40,29 @@ Array [
     >
       Tags: 
     </span>
-    <span
-      className="ant-tag ant-tag-has-color"
-      style={
-        Object {
-          "backgroundColor": "#ffa39e",
-          "color": "black",
+    <span>
+      <span
+        className="ant-tag ant-tag-has-color"
+        style={
+          Object {
+            "backgroundColor": "#ffa39e",
+            "color": "black",
+          }
         }
-      }
-    >
-      awesome
-    </span>
-    <span
-      className="ant-tag ant-tag-has-color"
-      style={
-        Object {
-          "backgroundColor": "#ffd591",
-          "color": "black",
+      >
+        awesome
+      </span>
+      <span
+        className="ant-tag ant-tag-has-color"
+        style={
+          Object {
+            "backgroundColor": "#ffd591",
+            "color": "black",
+          }
         }
-      }
-    >
-      nice
+      >
+        nice
+      </span>
     </span>
   </div>,
   <div

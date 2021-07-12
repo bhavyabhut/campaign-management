@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Title Found match snapshot 1`] = `
+<div
+  className="mrb"
+>
+  <span
+    className="customLabel"
+  >
+    Creator Name: 
+  </span>
+  <span>
+    Push Notification
+  </span>
+</div>
+`;

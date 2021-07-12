@@ -8,6 +8,7 @@ import AddCampaignModal from './Add';
 import EditCampaignModal from './Edit';
 import Content from '../../../components/Card/Content';
 import NoData from '../../../components/NoData';
+import Title from '../../../components/Card/Title';
 
 const { updateModal, addModal, deleteModal, deleteData, changeStatus } = actions;
 const { Option } = Select;
@@ -78,7 +79,7 @@ const Campaign = () => {
             <Col lg={8} md={12} sm={12} xs={24} style={{ margin: '16px 0' }}>
               <Card
                 hoverable
-                title={`Campaign Name: ${data.campaign_name}`}
+                title={<Title campaign_name={data.campaign_name} />}
                 actions={[
                   <Tooltip title="Toggle Start/Pause">
                     <Switch
