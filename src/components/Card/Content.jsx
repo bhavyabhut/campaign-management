@@ -21,15 +21,16 @@ const Content = ({ data }) => (
     <div className={style.mrb}>
       <span className={style.customLabel}>Tags: </span>
       <span>
-        {data.tags &&
-          data.tags.map(tagData => {
-            const num = tagData.charCodeAt(0) + tagData.charCodeAt(tagData.length - 1);
-            return (
-              <Tag key={tagData} style={{ color: 'black' }} color={tagColor[num % 11]}>
-                {tagData}
-              </Tag>
-            );
-          })}
+        {data.tags && data.tags.length > 0
+          ? data.tags.map(tagData => {
+              const num = tagData.charCodeAt(0) + tagData.charCodeAt(tagData.length - 1);
+              return (
+                <Tag key={tagData} style={{ color: 'black' }} color={tagColor[num % 11]}>
+                  {tagData}
+                </Tag>
+              );
+            })
+          : 'Not Specified'}
       </span>
     </div>
     <div className={style.mrb}>
