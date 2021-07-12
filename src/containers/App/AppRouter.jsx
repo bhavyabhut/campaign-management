@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Layout from './Layout';
 
 import { PRIVATE_ROUTE } from '../../constants/routerConst';
@@ -23,22 +23,19 @@ const routes = [
   },
 ];
 
-const Routers = () => {
-  const { url } = useRouteMatch();
-  return (
-    <Layout>
-      <Suspense fallback={<Spinner />}>
-        <Switch>
-          {routes.map(route => (
-            <Route exact={route.exact} key={route.path} path={`${url}/${route.path}`}>
-              <route.component />
-            </Route>
-          ))}
-          <Route component={lazy(() => import('../Pages/404'))} />
-        </Switch>
-      </Suspense>
-    </Layout>
-  );
-};
-
+const Routers = () => (
+  // const { url } = useRouteMatch();
+  <Layout>
+    <Suspense fallback={<Spinner />}>
+      <Switch>
+        {routes.map(route => (
+          <Route exact={route.exact} key={route.path} path={`/${route.path}`}>
+            <route.component />
+          </Route>
+        ))}
+        <Route component={lazy(() => import('../Pages/404'))} />
+      </Switch>
+    </Suspense>
+  </Layout>
+);
 export default Routers;

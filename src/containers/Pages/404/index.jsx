@@ -8,7 +8,7 @@ export default function NoPage() {
     <div className={style.noPage}>
       <Logo className={style.noPageLogo} />
       <span>
-        Go back to <Link to="/admin">dashboard</Link>{' '}
+        Go back to <Link to="/dashboard">dashboard</Link>{' '}
       </span>
     </div>
   );

@@ -56,14 +56,15 @@ export default function Routes() {
       <Suspense fallback={<Spinner />}>
         <Router>
           <Switch>
+            <PrivateRoute path="/">
+              <App />
+            </PrivateRoute>
             {publicRoutes.map(route => (
               <Route key={route.path} path={route.path} exact={route.exact}>
                 <route.component />
               </Route>
             ))}
-            <PrivateRoute path="/admin">
-              <App />
-            </PrivateRoute>
+
             <Route component={lazy(() => import('./containers/Pages/404'))} />
           </Switch>
         </Router>

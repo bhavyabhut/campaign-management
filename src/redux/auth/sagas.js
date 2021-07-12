@@ -31,7 +31,6 @@ export function* checkAuthorization() {
         type: actions.LOGIN_SUCCESS,
         token,
       });
-      history.push('/admin');
     } catch (e) {
       yield call(showNotification, { ...unHandleError });
     }

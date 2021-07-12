@@ -24,11 +24,11 @@ const Index = ({ children }) => {
         </div>
         <Menu theme="dark" defaultActiveFirst mode="inline">
           <Menu.Item key="1" icon={<DashboardOutlined />}>
-            <Link to="/admin/dashboard">Dashboard</Link>
+            <Link to="/dashboard">Dashboard</Link>
           </Menu.Item>
 
           <Menu.Item key="2" icon={<HomeOutlined />}>
-            <Link to="/admin/campaigns">Campaigns</Link>
+            <Link to="/campaigns">Campaigns</Link>
           </Menu.Item>
         </Menu>
       </Sider>
