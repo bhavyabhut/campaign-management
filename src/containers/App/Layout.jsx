@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Layout, Menu } from 'antd';
 import { DashboardOutlined, HomeOutlined } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Avatar from 'antd/lib/avatar/avatar';
 
 import AppRouter from './AppRouter';
@@ -13,6 +13,7 @@ const { SubMenu } = Menu;
 
 const MyLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
+  const { pathname } = useLocation();
 
   const onCollapse = collapse => setCollapsed(collapse);
 
@@ -27,13 +28,16 @@ const MyLayout = () => {
     };
   }, []);
 
+  let defaultActiveKey = '1';
+  if (pathname === '/campaigns') defaultActiveKey = '2';
+
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
         <div className="logo">
           <Logo />
         </div>
-        <Menu theme="dark" defaultActiveFirst mode="inline">
+        <Menu theme="dark" selectedKeys={defaultActiveKey} mode="inline">
           <Menu.Item key="1" icon={<DashboardOutlined />}>
             <Link to="/dashboard">Dashboard</Link>
           </Menu.Item>
