@@ -1,21 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Layout, Menu } from 'antd';
 import { DashboardOutlined, HomeOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import Avatar from 'antd/lib/avatar/avatar';
-import AppRouter from './AppRouter';
 
+import AppRouter from './AppRouter';
 import Logo from '../../assets/Logo';
+import { getWindowDimension } from '../../utility/helpers/general';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
-const Index = () => {
+const MyLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
 
-  const onCollapse = collapse => {
-    setCollapsed(collapse);
+  const onCollapse = collapse => setCollapsed(collapse);
+
+  const handleResize = () => {
+    if (getWindowDimension().width < 767) setCollapsed(true);
   };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize, false);
+    return () => {
+      window.removeEventListener('resize', handleResize, false);
+    };
+  }, []);
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
@@ -60,4 +70,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default MyLayout;

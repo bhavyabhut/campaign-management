@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import style from './NoPage.module.css';
 import { ReactComponent as Logo } from '../../../assets/images/undraw_page_not_found_su7k.svg';
 
