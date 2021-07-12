@@ -3,13 +3,14 @@ import { Layout, Menu } from 'antd';
 import { DashboardOutlined, HomeOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import Avatar from 'antd/lib/avatar/avatar';
+import AppRouter from './AppRouter';
 
 import Logo from '../../assets/Logo';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
-const Index = ({ children }) => {
+const Index = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   const onCollapse = collapse => {
@@ -48,7 +49,7 @@ const Index = ({ children }) => {
         </Header>
         <Content style={{ margin: '0 16px' }}>
           <div className="site-layout-background" style={{ padding: '1.5rem' }}>
-            {children}
+            <AppRouter />
           </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>

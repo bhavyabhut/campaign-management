@@ -7,7 +7,7 @@ import ErrorBoundary from './ErrorBoundary';
 import { PUBLIC_ROUTE } from './constants/routerConst';
 import Spinner from './components/Spinner';
 
-const App = lazy(() => import('./containers/App/AppRouter'));
+const App = lazy(() => import('./containers/App/Layout'));
 
 const publicRoutes = [
   // All public Router like (login,etc) goes here
